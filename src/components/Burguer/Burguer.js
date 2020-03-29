@@ -4,7 +4,7 @@ import classes from './Burguer.module.css'
 import BurguerIngredient from './BurguerIngredient/BurguerIngredient'
 
 const burguer = props => {
-  const transformedIngredients = Object.keys(props.ingredients)
+  let transformedIngredients = Object.keys(props.ingredients)
     .map(igKey => {
       return [...Array(props.ingredients[igKey])].map((_, i) => {
         return <BurguerIngredient key={igKey + 1} type={igKey} />
@@ -13,7 +13,10 @@ const burguer = props => {
     .reduce((arr, el) => {
       return arr.concat(el)
     }, [])
-  console.log(transformedIngredients)
+
+  if (transformedIngredients.length === 0) {
+      transformedIngredients = <p>Please start adding ingredients!</p>
+  }
 
   return (
     <div className={classes.Burguer}>
