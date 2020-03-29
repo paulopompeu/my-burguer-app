@@ -9,34 +9,32 @@ class BurguerIngredient extends Component{
 
         switch (this.props.type) {
           case 'bread-bottom':
-            ingredient = <div className={classes.BreadBottom}>&nbsp;</div>;
+            ingredient = <div className={classes.BreadBottom}></div>;
             break
           case 'bread-top':
             ingredient = (
-              <div className={classes.BreadTop}>&nbsp;
-                <div className={classes.Seeds1}>&nbsp;</div>
-                <div className={classes.Seeds2}>&nbsp;</div>
+              <div className={classes.BreadTop}>
+                <div className={classes.Seeds1}></div>
+                <div className={classes.Seeds2}></div>
               </div>
             )
             break
           case 'meat':
-            ingredient = <div className={classes.Meat}>&nbsp;</div>
+            ingredient = <div className={classes.Meat}></div>
             break
           case 'cheese':
-            ingredient = <div className={classes.Cheese}>&nbsp;</div>
+            ingredient = <div className={classes.Cheese}></div>
             break
           case 'bacon':
-            ingredient = <div className={classes.Bacon}>&nbsp;</div>
+            ingredient = <div className={classes.Bacon}></div>
             break
           case 'salad':
-            ingredient = <div className={classes.Salad}>&nbsp; </div>
+            ingredient = <div className={classes.Salad}> </div>
             break
           default:
             ingredient = null
         }
-        console.log(ingredient)
         return ingredient
-        // return <div className={classes.BreadTop}></div>
     }
 } 
 
