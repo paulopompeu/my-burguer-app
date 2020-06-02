@@ -7,7 +7,7 @@ const burguer = props => {
   let transformedIngredients = Object.keys(props.ingredients)
     .map(igKey => {
       return [...Array(props.ingredients[igKey])].map((_, i) => {
-        return <BurguerIngredient key={igKey + 1} type={igKey} />
+        return <BurguerIngredient key={igKey + i} type={igKey} />
       })
     })
     .reduce((arr, el) => {
